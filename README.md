@@ -1,2 +1,2 @@
 # school-text-adventure
-A text adventure engine for a school projecy
+A text adventure engine for a school project
