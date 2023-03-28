@@ -1,23 +1,44 @@
 {
-  "levels" : [
+  "level_description" : "",
+  "level_name" : "",
+
+
+  "rooms" : [
   {
   "id" : 0,
     "name" : "dungeons",
+    "description" : "",
     "north" : -1,
     "east" : -1,
     "south" : -1,
     "west" : -1,
     "up" : -1,
     "down" : -1
-  },{
-      "id" : 2,
-      "name" : "castles",
+  },
+    {
+      "id" : 1,
+      "name" : "castle",
+      "description" : "",
       "north" : -1,
       "east" : -1,
       "south" : -1,
       "west" : -1,
       "up" : -1,
       "down" : -1
+    }
+  ],
+  "items" : [
+    {
+      "id" : 0,
+      "name" : "",
+      "description" : "",
+      "default_location": ""
+    },
+    {
+      "id" : 1,
+      "name" : "",
+      "description" : "",
+      "default_location": ""
     }
   ]
 
