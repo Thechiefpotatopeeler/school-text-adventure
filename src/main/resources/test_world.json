@@ -1,0 +1,25 @@
+{
+  "levels" : [
+  {
+  "id" : 0,
+    "name" : "dungeons",
+    "north" : -1,
+    "east" : -1,
+    "south" : -1,
+    "west" : -1,
+    "up" : -1,
+    "down" : -1
+  },{
+      "id" : 2,
+      "name" : "castles",
+      "north" : -1,
+      "east" : -1,
+      "south" : -1,
+      "west" : -1,
+      "up" : -1,
+      "down" : -1
+    }
+  ]
+
+
+}
