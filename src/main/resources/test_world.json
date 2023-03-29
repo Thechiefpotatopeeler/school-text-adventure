@@ -1,6 +1,7 @@
 {
   "level_description" : "",
   "level_name" : "",
+  "start_room" : 0,
 
 
   "rooms" : [
