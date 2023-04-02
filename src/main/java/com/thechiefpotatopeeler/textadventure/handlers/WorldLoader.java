@@ -57,6 +57,8 @@ public class WorldLoader {
     }
     /**
      * @return the roomMappings
+     * where [0][] is north, [1][] is east, [2][] is south, [3][] is west, [4][] is up, [5][] is down,
+     * and [][i] is the room ID to go to when going in a given direction from room i.
      */
     public int[][] getRoomMappings(){
         return roomMappings;
