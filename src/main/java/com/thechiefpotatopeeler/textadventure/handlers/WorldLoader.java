@@ -18,7 +18,10 @@ public class WorldLoader {
 
     private ArrayList<Room> rooms = new ArrayList<Room>(); //The rooms in the game world
     private int[][] roomMappings; //The connections between the rooms in the game world
-    public WorldLoader(String worldFile) throws IOException, ParseException, FileNotFoundException {
+    /**
+    * @param worldFile string with the name of the world file to load
+    * */
+    public WorldLoader(String worldFile) throws IOException, ParseException, IOException {
         /* This class loads the rooms and their connections in the game world.
          * This is taken from the JSON file of the world.
          * The JSON file is parsed and the rooms are loaded into the rooms arrayList.
@@ -29,6 +32,7 @@ public class WorldLoader {
          * value is -1, there is no room connected in that direction.
          *
          * For example, roomMappings[0][4] is the ID of the room that is connected to room 4 in the north direction.
+         *
          * */
         JSONParser parser = new JSONParser();
         Reader reader = new FileReader(worldFile);
@@ -56,7 +60,7 @@ public class WorldLoader {
         return rooms;
     }
     /**
-     * @return the roomMappings
+     * @return  the roomMappings
      * where [0][] is north, [1][] is east, [2][] is south, [3][] is west, [4][] is up, [5][] is down,
      * and [][i] is the room ID to go to when going in a given direction from room i.
      */

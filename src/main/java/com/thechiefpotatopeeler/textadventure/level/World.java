@@ -6,11 +6,14 @@ import java.util.ArrayList;
 
 public class World {
 
-    public ArrayList<Room> rooms;
-    public int[][] roomMappings;
-    public World(WorldLoader worldLoader){
-        //The world's info is loaded from the worldLoader
-        this.rooms = worldLoader.getRooms();
-        this.roomMappings = worldLoader.getRoomMappings();
+    public static ArrayList<Room> rooms;
+    public static int[][] roomMappings;
+
+    public World(){
+    }
+
+    public static void acceptWorlds(WorldLoader worldLoader){
+        rooms = worldLoader.getRooms();
+        roomMappings = worldLoader.getRoomMappings();
     }
 }
