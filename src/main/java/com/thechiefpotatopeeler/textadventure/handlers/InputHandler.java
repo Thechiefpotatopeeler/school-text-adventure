@@ -7,7 +7,6 @@ import com.thechiefpotatopeeler.textadventure.Main;
 public class InputHandler /*extends Thread*/{
 
     public InputHandler() {
-
     }
     /*@Override
     public void run() {
@@ -29,11 +28,18 @@ public class InputHandler /*extends Thread*/{
         System.out.println("Please enter a command: ");
         String[] input = Main.inputStream.nextLine().split(" ");
         InputResult result = new InputResult();
+
+        while(!(input[0].equals("move"))||!(input[0].equals("inventory")));{
+            System.out.println("Please enter a valid command: ");
+            input = Main.inputStream.nextLine().split(" ");
+        }
+
         result.type = InputType.valueOf(input[0].toUpperCase());
         result.args = new ArrayList<String>();
         for (int i = 1; i < input.length-1; i++){
             result.args.add(input[i]);
         }
+
         return result;
     }
 }
