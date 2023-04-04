@@ -1,6 +1,6 @@
 {
-  "level_description" : "",
-  "level_name" : "",
+  "level_description" : "this is to demonstrate how to make a level",
+  "level_name" : "test world",
   "start_room" : 0,
 
 

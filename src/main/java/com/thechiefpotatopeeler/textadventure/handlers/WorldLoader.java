@@ -14,13 +14,14 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.io.FileReader;
 import java.io.Reader;
+import java.lang.Long;
 import java.lang.ClassCastException;
 
 public class WorldLoader {
 
     private ArrayList<Room> rooms; //The rooms in the game world
     private int[][] roomMappings; //The connections between the rooms in the game world
-    private int defaultRoom; //The default room that the player starts in
+    private long defaultRoom; //The default room that the player starts in
     private String levelName;
     private String levelDescription;
     /**
@@ -46,9 +47,10 @@ public class WorldLoader {
             JSONArray roomList = (JSONArray) worldJSON.get("rooms");
             rooms = new ArrayList<Room>();
             roomMappings = new int[6][roomList.size()];
-            defaultRoom = (Integer) worldJSON.get("start_room");
+            defaultRoom = (long) worldJSON.get("start_room");
             levelName = (String) worldJSON.get("level_name");
             levelDescription = (String) worldJSON.get("level_description");
+            System.out.println("World file loaded, loading rooms");
                 for(int i = 0; i < roomList.size(); i++){
                     //The rooms
                     JSONObject currentRoom = (JSONObject) roomList.get(i);
@@ -66,8 +68,6 @@ public class WorldLoader {
             System.out.println("Error loading world file");
         } catch (ParseException e){
             System.out.println("Error parsing world file");
-        } catch (ClassCastException e){
-            System.out.println("World file is not formatted correctly");
         }
 
 
@@ -88,9 +88,14 @@ public class WorldLoader {
     }
 
     public int getDefaultRoom(){
-        return defaultRoom;
+
+        return (int) defaultRoom;
     }
     public String getLevelDescription(){
         return levelDescription;
+    }
+
+    public String getLevelName(){
+        return levelName;
     }
 }
